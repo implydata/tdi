@@ -1,0 +1,22 @@
+{
+  "name": "tdi",
+  "version": "0.1.1",
+  "description": "Typings Direct Injection",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "bin": {
+    "tdi": "bin/tdi"
+  },
+  "files": [
+    "bin/",
+    "typings/",
+    "index.js"
+  ],
+  "dependencies": {
+    "shelljs": "^0.7.4"
+  }
+}
