@@ -1,4 +1,4 @@
-declare module 'fs-promise-tsc' {
+declare module 'fs-promise' {
   import * as Q from 'q';
   import * as stream from "stream";
   import * as events from "events";
