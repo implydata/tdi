@@ -4,8 +4,8 @@
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 // modified by eva
 
-/// <reference path="express" />
-/// <reference path="express-session" />
+/// <reference type="express" />
+/// <reference type="express-session" />
 
 declare module "connect-redis" {
     import * as express from "express";
