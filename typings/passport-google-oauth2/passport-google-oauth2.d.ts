@@ -3,7 +3,7 @@
 // Definitions by: James Roland Cabresos <https://github.com/staticfunction>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
-/// <reference path="../passport/passport.d.ts"/>
+/// <reference path="passport"/>
 
 declare module 'passport-google-oauth2' {
 

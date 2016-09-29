@@ -4,8 +4,8 @@
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 // modified by eva
 
-/// <reference path="../express/express.d.ts" />
-/// <reference path="../express-session/express-session.d.ts" />
+/// <reference path="express" />
+/// <reference path="express-session" />
 
 declare module "connect-redis" {
     import * as express from "express";
