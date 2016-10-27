@@ -7,6 +7,21 @@ function exitError(msg) {
   process.exit(1);
 }
 
+const argv = require('yargs')
+  .usage('tdi')
+  .boolean('q')
+  .describe('q', 'quiet, do not print')
+  .help('h')
+  .alias('h', 'help')
+  .argv;
+
+const quiet = Boolean(argv.q)
+
+function log(s) {
+  if (quiet) return;
+  console.log(s);
+}
+
 // Gather my known typing
 
 var myTypings = {};
@@ -53,9 +68,9 @@ nm.forEach(mod => {
   }
 
   if (hasTypings) {
-    console.log(`TDI: Skipping module ${mod}`);
+    log(`TDI: Skipping module ${mod}`);
   } else {
-    console.log(`TDI: Injecting types into '${mod}'`);
+    log(`TDI: Injecting types into '${mod}'`);
     modPackage['_tdi'] = true;
     modPackage['typings'] = entryFile;
     cp(`${typingDir}/${mod}/*.d.ts`, `node_modules/${mod}`);

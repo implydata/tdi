@@ -1,6 +1,6 @@
 {
   "name": "tdi",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Typings Direct Injection",
   "main": "index.js",
   "scripts": {
@@ -17,6 +17,7 @@
     "index.js"
   ],
   "dependencies": {
-    "shelljs": "^0.7.4"
+    "shelljs": "^0.7.4",
+    "yargs": "^6.0.0"
   }
 }
