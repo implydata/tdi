@@ -1,5 +1,5 @@
 declare module "classnames" {
     function classnames(...parts: any[]): string;
-    namespace classnames {};
+    namespace classnames {}
     export = classnames;
 }
