@@ -1,5 +1,5 @@
-// Type definitions for request-promise v4.1.0
-// Project: https://github.com/request/request-promise
+// Type definitions for request-promise-any
+// Project: https://github.com/request/request-promise-any
 // Definitions by: Christopher Glantschnig <https://github.com/cglantschnig/>, Joe Skeen <http://github.com/joeskeen>, Aya Morisawa <https://github.com/AyaMorisawa>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
