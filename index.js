@@ -73,7 +73,7 @@ nm.forEach(mod => {
     log(`TDI: Injecting types into '${mod}'`);
     modPackage['_tdi'] = true;
     modPackage['typings'] = entryFile;
-    cp(`${typingDir}/${mod}/*.d.ts`, `node_modules/${mod}`);
+    cp('-r', `${typingDir}/${mod}/*`, `node_modules/${mod}`);
     fs.writeFileSync(packageFile, JSON.stringify(modPackage, null, 2), { encoding: 'utf8'});
   }
 })
