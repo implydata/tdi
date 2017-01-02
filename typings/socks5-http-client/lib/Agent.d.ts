@@ -1,3 +1,3 @@
 import { Agent } from 'http';
-var agent: Agent;
+declare const agent: Agent;
 export = agent;
