@@ -1,6 +1,6 @@
 {
   "name": "tdi",
-  "version": "0.2.12",
+  "version": "0.2.13",
   "description": "Typings Direct Injection",
   "main": "index.js",
   "scripts": {
