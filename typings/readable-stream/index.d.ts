@@ -1,8 +1,4 @@
 declare module "readable-stream" {
-    import * as events from "events";
-
-    // --------------
-
     export class EventEmitter {
         addListener(event: string | symbol, listener: Function): this;
         on(event: string | symbol, listener: Function): this;
@@ -53,7 +49,7 @@ declare module "readable-stream" {
 
     // --------------
 
-    export class Stream extends events.EventEmitter {
+    export class Stream extends EventEmitter {
         pipe<T extends WritableStream>(destination: T, options?: { end?: boolean; }): T;
     }
 
@@ -64,7 +60,7 @@ declare module "readable-stream" {
         read?: (size?: number) => any;
     }
 
-    export class Readable extends events.EventEmitter implements ReadableStream {
+    export class Readable extends EventEmitter implements ReadableStream {
         readable: boolean;
         constructor(opts?: ReadableOptions);
         protected _read(size: number): void;
@@ -147,7 +143,7 @@ declare module "readable-stream" {
         writev?: (chunks: { chunk: string | Buffer, encoding: string }[], callback: Function) => any;
     }
 
-    export class Writable extends events.EventEmitter implements WritableStream {
+    export class Writable extends EventEmitter implements WritableStream {
         writable: boolean;
         constructor(opts?: WritableOptions);
         protected _write(chunk: any, encoding: string, callback: Function): void;
@@ -252,7 +248,7 @@ declare module "readable-stream" {
     }
 
     // Note: Transform lacks the _read and _write methods of Readable/Writable.
-    export class Transform extends events.EventEmitter implements ReadWriteStream {
+    export class Transform extends EventEmitter implements ReadWriteStream {
         readable: boolean;
         writable: boolean;
         constructor(opts?: TransformOptions);
