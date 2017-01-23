@@ -19,26 +19,24 @@ declare module "readable-stream" {
     export interface ReadableStream extends EventEmitter {
         readable: boolean;
         isTTY?: boolean;
-        read(size?: number): string | Buffer;
+        read(size?: number): any;
         setEncoding(encoding: string | null): void;
         pause(): ReadableStream;
         resume(): ReadableStream;
         isPaused(): boolean;
         pipe<T extends WritableStream>(destination: T, options?: { end?: boolean; }): T;
         unpipe<T extends WritableStream>(destination?: T): void;
-        unshift(chunk: string): void;
-        unshift(chunk: Buffer): void;
+        unshift(chunk: any): void;
         wrap(oldStream: ReadableStream): ReadableStream;
     }
 
     export interface WritableStream extends EventEmitter {
         writable: boolean;
         isTTY?: boolean;
-        write(buffer: Buffer | string, cb?: Function): boolean;
+        write(buffer: any, cb?: Function): boolean;
         write(str: string, encoding?: string, cb?: Function): boolean;
         end(): void;
-        end(buffer: Buffer, cb?: Function): void;
-        end(str: string, cb?: Function): void;
+        end(str: any, cb?: Function): void;
         end(str: string, encoding?: string, cb?: Function): void;
     }
 
@@ -87,49 +85,49 @@ declare module "readable-stream" {
         addListener(event: string, listener: Function): this;
         addListener(event: string, listener: Function): this;
         addListener(event: "close", listener: () => void): this;
-        addListener(event: "data", listener: (chunk: Buffer | string) => void): this;
+        addListener(event: "data", listener: (chunk: any) => void): this;
         addListener(event: "end", listener: () => void): this;
         addListener(event: "readable", listener: () => void): this;
         addListener(event: "error", listener: (err: Error) => void): this;
 
         emit(event: string, ...args: any[]): boolean;
         emit(event: "close"): boolean;
-        emit(event: "data", chunk: Buffer | string): boolean;
+        emit(event: "data", chunk: any): boolean;
         emit(event: "end"): boolean;
         emit(event: "readable"): boolean;
         emit(event: "error", err: Error): boolean;
 
         on(event: string, listener: Function): this;
         on(event: "close", listener: () => void): this;
-        on(event: "data", listener: (chunk: Buffer | string) => void): this;
+        on(event: "data", listener: (chunk: any) => void): this;
         on(event: "end", listener: () => void): this;
         on(event: "readable", listener: () => void): this;
         on(event: "error", listener: (err: Error) => void): this;
 
         once(event: string, listener: Function): this;
         once(event: "close", listener: () => void): this;
-        once(event: "data", listener: (chunk: Buffer | string) => void): this;
+        once(event: "data", listener: (chunk: any) => void): this;
         once(event: "end", listener: () => void): this;
         once(event: "readable", listener: () => void): this;
         once(event: "error", listener: (err: Error) => void): this;
 
         prependListener(event: string, listener: Function): this;
         prependListener(event: "close", listener: () => void): this;
-        prependListener(event: "data", listener: (chunk: Buffer | string) => void): this;
+        prependListener(event: "data", listener: (chunk: any) => void): this;
         prependListener(event: "end", listener: () => void): this;
         prependListener(event: "readable", listener: () => void): this;
         prependListener(event: "error", listener: (err: Error) => void): this;
 
         prependOnceListener(event: string, listener: Function): this;
         prependOnceListener(event: "close", listener: () => void): this;
-        prependOnceListener(event: "data", listener: (chunk: Buffer | string) => void): this;
+        prependOnceListener(event: "data", listener: (chunk: any) => void): this;
         prependOnceListener(event: "end", listener: () => void): this;
         prependOnceListener(event: "readable", listener: () => void): this;
         prependOnceListener(event: "error", listener: (err: Error) => void): this;
 
         removeListener(event: string, listener: Function): this;
         removeListener(event: "close", listener: () => void): this;
-        removeListener(event: "data", listener: (chunk: Buffer | string) => void): this;
+        removeListener(event: "data", listener: (chunk: any) => void): this;
         removeListener(event: "end", listener: () => void): this;
         removeListener(event: "readable", listener: () => void): this;
         removeListener(event: "error", listener: (err: Error) => void): this;
@@ -139,8 +137,8 @@ declare module "readable-stream" {
         highWaterMark?: number;
         decodeStrings?: boolean;
         objectMode?: boolean;
-        write?: (chunk: string | Buffer, encoding: string, callback: Function) => any;
-        writev?: (chunks: { chunk: string | Buffer, encoding: string }[], callback: Function) => any;
+        write?: (chunk: any, encoding: string, callback: Function) => any;
+        writev?: (chunks: { chunk: any, encoding: string }[], callback: Function) => any;
     }
 
     export class Writable extends EventEmitter implements WritableStream {
@@ -173,7 +171,7 @@ declare module "readable-stream" {
 
         emit(event: string, ...args: any[]): boolean;
         emit(event: "close"): boolean;
-        emit(event: "drain", chunk: Buffer | string): boolean;
+        emit(event: "drain", chunk: any): boolean;
         emit(event: "error", err: Error): boolean;
         emit(event: "finish"): boolean;
         emit(event: "pipe", src: Readable): boolean;
@@ -243,7 +241,7 @@ declare module "readable-stream" {
     }
 
     export interface TransformOptions extends DuplexOptions {
-        transform?: (chunk: string | Buffer, encoding: string, callback: Function) => any;
+        transform?: (chunk: any, encoding: string, callback: Function) => any;
         flush?: (callback: Function) => any;
     }
 
