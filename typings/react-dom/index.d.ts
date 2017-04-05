@@ -5,14 +5,13 @@
 
 /// <reference path="react-dom.server.d.ts" />
 
-export as namespace ReactDOM;
-export = ReactDOM;
+declare module 'react-dom' {
 
 import { ReactInstance, Component, ComponentState,
         ReactElement, SFCElement, CElement,
          DOMAttributes, DOMElement } from 'react';
 
-declare namespace ReactDOM {
+namespace ReactDOM {
     function findDOMNode<E extends Element>(instance: ReactInstance): E;
     function findDOMNode(instance: ReactInstance): Element;
 
@@ -61,4 +60,7 @@ declare namespace ReactDOM {
         element: ReactElement<P>,
         container: Element,
         callback?: (component?: Component<P, ComponentState> | Element) => any): Component<P, ComponentState> | Element | void;
+}
+
+export = ReactDOM;
 }
