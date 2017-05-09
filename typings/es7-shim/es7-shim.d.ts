@@ -1,4 +1,4 @@
 declare module "es7-shim" {
-    export shim(): void;
+    export function shim(): void;
 }
 
