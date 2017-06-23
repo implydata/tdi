@@ -1,12 +1,4 @@
-export interface SpawnServerOptions {
-  verbose?: boolean;
-  env?: any;
+declare module "node-spawn-server" {
+  var p: any;
+  export = p;
 }
-
-export function spawnServer(cmd: string, options?: SpawnServerOptions): {
-  getStderr: () => string;
-  getStdout: () => string;
-  getStdall: () => string;
-  onHook: (hook: string, callback: Function) => void;
-  kill: () => void;
-};
