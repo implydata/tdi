@@ -7,7 +7,6 @@ declare module 'request-promise-any' {
     import request = require('request');
     import http = require('http');
     import errors = require('request-promise/errors');
-    import Promise = require('any-promise');
 
     namespace requestPromise {
         interface RequestPromise extends request.Request {
