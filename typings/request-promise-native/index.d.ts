@@ -37,7 +37,7 @@ declare module 'request-promise-native' {
 	export = requestPromise;
 }
 declare module 'request-promise/errors' {
-    import rp = require('request-promise-any');
+    import rp = require('request-promise-native');
     import http = require('http');
 
     export interface RequestError extends Error {
