@@ -1,0 +1,83 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "@types/download",
+        "scope": "@types",
+        "escapedName": "@types%2fdownload",
+        "name": "@types/download",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "/Users/eva/imply-projects/imply-ui"
+    ]
+  ],
+  "_from": "@types/download@latest",
+  "_id": "@types/download@6.2.1",
+  "_inCache": true,
+  "_location": "/@types/download",
+  "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/download-6.2.1.tgz_1515009906324_0.304608354344964"
+  },
+  "_npmUser": {
+    "name": "types",
+    "email": "ts-npm-types@microsoft.com"
+  },
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "@types/download",
+    "scope": "@types",
+    "escapedName": "@types%2fdownload",
+    "name": "@types/download",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "http://registry.npmjs.org/@types/download/-/download-6.2.1.tgz",
+  "_shasum": "56427bd11bebf8002e09abb7a5383dc870af7240",
+  "_shrinkwrap": null,
+  "_spec": "@types/download",
+  "_where": "/Users/eva/imply-projects/imply-ui",
+  "contributors": [
+    {
+      "name": "Nico Jansen",
+      "url": "https://github.com/nicojs"
+    }
+  ],
+  "dependencies": {
+    "@types/node": "*"
+  },
+  "description": "TypeScript definitions for download",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "integrity": "sha512-1kXxu3/+Rz7uPIEvAOmqPc7E8xDHLvOrK714X3z4RDhIoYgWvE2/l9nQC9kDFjDX78dGZjcGmbvxK934ic9uPw==",
+    "shasum": "56427bd11bebf8002e09abb7a5383dc870af7240",
+    "tarball": "https://registry.npmjs.org/@types/download/-/download-6.2.1.tgz"
+  },
+  "license": "MIT",
+  "main": "",
+  "maintainers": [
+    {
+      "name": "types",
+      "email": "ts-npm-types@microsoft.com"
+    }
+  ],
+  "name": "@types/download",
+  "optionalDependencies": {},
+  "readme": "# Installation\r\n> `npm install --save @types/download`\r\n\r\n# Summary\r\nThis package contains type definitions for download (https://github.com/kevva/download).\r\n\r\n# Details\r\nFiles were exported from https://www.github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/download\r\n\r\nAdditional Details\r\n * Last updated: Wed, 03 Jan 2018 20:04:09 GMT\r\n * Dependencies: node\r\n * Global values: none\r\n\r\n# Credits\r\nThese definitions were written by Nico Jansen <https://github.com/nicojs>.\r\n",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "https://www.github.com/DefinitelyTyped/DefinitelyTyped.git"
+  },
+  "scripts": {},
+  "typeScriptVersion": "2.2",
+  "typesPublisherContentHash": "a502a5ddd9ceb2ee032e2700d507d675df80d6703ca1d4c29c12de4b24c7c46d",
+  "version": "6.2.1"
+}
