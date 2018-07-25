@@ -58,6 +58,10 @@ export function createTransport(transport: JSONTransport | JSONTransport.Options
 export function createTransport(transport: SESTransport | SESTransport.Options, defaults?: SESTransport.Options): Mail;
 export function createTransport(transport: Transport | TransportOptions, defaults?: TransportOptions): Mail;
 
+export type CreateTransportOptions = SMTPTransport |  SMTPTransport.Options | string | SMTPPool | SMTPPool.Options
+  | SendmailTransport | SendmailTransport.Options | StreamTransport | StreamTransport.Options | JSONTransport
+  | JSONTransport.Options | SESTransport | SESTransport.Options | Transport | TransportOptions;
+
 export function createTestAccount(apiUrl: string, callback: (err: Error | null, testAccount: TestAccount) => void): void;
 export function createTestAccount(callback: (err: Error | null, testAccount: TestAccount) => void): void;
 export function createTestAccount(apiUrl?: string): Promise<TestAccount>;
