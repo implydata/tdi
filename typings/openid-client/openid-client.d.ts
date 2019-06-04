@@ -8,6 +8,11 @@ declare module "openid-client" {
       response?: any;
     }
   
+    export class Strategy extends passport.Strategy {
+      constructor(options: StrategyOptions, verify: any): Strategy;
+      authenticate(req: express.Request, options?: Object): void;
+    }
+  
     type DiscoverOptions = {
       issuer: string;
       authorization_endpoint: string;
@@ -17,6 +22,8 @@ declare module "openid-client" {
     };
   
     export class Issuer {
+      static defaultHttpOptions: any;
+
       constructor(options: DiscoverOptions);
   
       static discover(url: string): Promise<Issuer>;
@@ -29,6 +36,7 @@ declare module "openid-client" {
     type ClientOptions = {
       client_id: string;
       client_secret: string;
+      redirect_uris?: string[];
     };
   
     type ClientKeyStore = any;
@@ -247,8 +255,10 @@ declare module "openid-client" {
         keystore?: ClientKeyStore
       ): Promise<Client>;
   
+      static defaultHttpOptions: any;
+
       CLOCK_TOLERANCE: number;
-  
+
       issuer: {
         metadata: Metadata;
       };
